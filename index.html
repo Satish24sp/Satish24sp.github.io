@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Satish | Senior iOS Engineer | iOS Developer | Mobile Developer | 15+ Apps | 9M+ Downloads</title>
+  <link rel="canonical" href="https://satish24sp.github.io/"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Satish",
+    "jobTitle": "Senior iOS Engineer",
+    "url": "https://satish24sp.github.io",
+    "sameAs": [
+      "https://github.com/Satish24sp",
+      "https://linkedin.com/in/satish-iosdev"
+    ]
+  }
+  </script>
+  <meta name="description" content="Senior iOS Engineer with 7+ years experience shipping 15+ apps and 9M+ downloads worldwide."/>
+  <meta name="keywords" content="iOS Engineer, Swift Developer, Mobile Developer, MVVM, Combine, SwiftUI, UIKit, Paytm, Senior iOS"/>
+  <meta name="author" content="Satish"/>
+  <meta property="og:title" content="Satish — Senior iOS Engineer"/>
+  <meta property="og:description" content="15+ iOS apps shipped · 9M+ downloads · 6 countries"/>
+  <meta property="og:image" content="./Resource/preview.png"/>
+  <meta property="og:url" content="https://satish24sp.github.io"/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Satish — Senior iOS Engineer"/>
+  <meta name="twitter:description" content="15+ iOS apps shipped · 9M+ downloads · 6 countries"/>
+  <meta name="twitter:image" content="./Resource/preview.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --blue:#007AFF;--blue-light:#E8F2FF;--blue-mid:#3395FF;
+      --dark:#1C1C1E;--mid:#3A3A3C;--subtle:#6E6E73;
+      --border:#D1D1D6;--bg:#F5F5F7;--white:#FFFFFF;
+      --card-shadow:0 2px 20px rgba(0,0,0,.07),0 1px 3px rgba(0,0,0,.05);
+      --card-shadow-hover:0 8px 40px rgba(0,122,255,.13),0 2px 8px rgba(0,0,0,.08);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--dark);line-height:1.6;-webkit-font-smoothing:antialiased}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.82);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(209,209,214,.5);padding:0 5%;height:56px;display:flex;align-items:center;justify-content:space-between}
+    .nav-brand{font-weight:700;font-size:22px;color:var(--dark);letter-spacing:-.5px;cursor:default;user-select:none}
+    .nav-links{display:flex;gap:32px}
+    .nav-links a{font-size:14px;font-weight:500;color:var(--subtle);text-decoration:none;transition:color .2s}
+    .nav-links a:hover{color:var(--blue)}
+
+    .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 5% 80px;background:linear-gradient(160deg,#fff 0%,#EEF5FF 60%,#F5F5F7 100%);position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(0,122,255,.07) 0%,transparent 65%);pointer-events:none}
+    .hero::after{content:'';position:absolute;bottom:-150px;left:-150px;width:500px;height:500px;background:radial-gradient(circle,rgba(0,122,255,.05) 0%,transparent 65%);pointer-events:none}
+    .hero-inner{position:relative;z-index:1;max-width:780px}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--blue-light);color:var(--blue);font-size:13px;font-weight:600;letter-spacing:.3px;padding:6px 14px;border-radius:100px;margin-bottom:28px;animation:fadeUp .6s ease both}
+    .hero-badge::before{content:'';width:7px;height:7px;background:var(--blue);border-radius:50%;animation:pulse 2s ease infinite}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+    .hero h1{font-size:clamp(42px,7vw,80px);font-weight:700;letter-spacing:-2px;line-height:1.05;color:var(--dark);margin-bottom:20px;animation:fadeUp .6s .1s ease both}
+    .hero h1 span{color:var(--blue)}
+    .hero-sub{font-size:clamp(17px,2.5vw,21px);color:var(--subtle);font-weight:400;line-height:1.5;max-width:620px;margin:0 auto 40px;animation:fadeUp .6s .2s ease both}
+    .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;animation:fadeUp .6s .3s ease both}
+    .btn-primary{background:var(--blue);color:#fff;font-weight:600;font-size:16px;padding:14px 28px;border-radius:14px;text-decoration:none;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+    .btn-primary:hover{background:var(--blue-mid);transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,122,255,.35)}
+    .btn-outline{background:var(--white);color:var(--dark);font-weight:600;font-size:16px;padding:14px 28px;border-radius:14px;text-decoration:none;border:1.5px solid var(--border);transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+    .btn-outline:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+
+    .stats-bar{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:32px 5%;animation:fadeUp .6s .4s ease both}
+    .stats-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+    .stat-num{font-size:36px;font-weight:700;letter-spacing:-1.5px;color:var(--blue);line-height:1}
+    .stat-label{font-size:13px;color:var(--subtle);margin-top:5px;font-weight:500}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+    section{padding:90px 5%}
+    .section-label{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+    .section-title{font-size:clamp(26px,4vw,38px);font-weight:700;letter-spacing:-1px;color:var(--dark);margin-bottom:16px}
+    .section-desc{font-size:17px;color:var(--subtle);max-width:560px;line-height:1.6;margin-bottom:52px}
+    .section-inner{max-width:1100px;margin:0 auto}
+
+    #experience{background:var(--white)}
+    .timeline{position:relative;padding-left:30px}
+    .timeline::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,var(--blue),rgba(0,122,255,.1));border-radius:2px}
+    .tl-item{position:relative;margin-bottom:44px;padding-left:26px}
+    .tl-item:last-child{margin-bottom:0}
+    .tl-dot{position:absolute;left:-38px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--blue);border:3px solid var(--white);box-shadow:0 0 0 3px rgba(0,122,255,.2)}
+    .tl-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+    .tl-company{font-size:19px;font-weight:700;color:var(--dark)}
+    .tl-dates{font-size:13px;color:var(--subtle);background:var(--bg);padding:3px 10px;border-radius:100px;font-weight:500}
+    .tl-role{font-size:15px;color:var(--blue);font-weight:600;margin-bottom:10px}
+    .tl-points{list-style:none}
+    .tl-points li{font-size:15px;color:var(--mid);padding:4px 0 4px 16px;position:relative;line-height:1.55}
+    .tl-points li::before{content:'›';position:absolute;left:0;color:var(--blue);font-weight:700}
+
+    #apps{background:var(--bg)}
+    .filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}
+    .filter-btn{font-size:13px;font-weight:600;padding:7px 16px;border-radius:100px;border:1.5px solid var(--border);background:var(--white);color:var(--subtle);cursor:pointer;transition:all .2s}
+    .filter-btn.active,.filter-btn:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+    .apps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+    .app-card{background:var(--white);border-radius:20px;padding:22px;box-shadow:var(--card-shadow);border:1px solid rgba(0,0,0,.04);transition:all .25s;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:14px}
+    .app-card:hover{box-shadow:var(--card-shadow-hover);transform:translateY(-3px)}
+    .app-card.hidden{display:none}
+    .app-card-top{display:flex;align-items:flex-start;gap:14px}
+    .app-icon{width:64px;height:64px;border-radius:14px;flex-shrink:0;background:linear-gradient(135deg,#E8F2FF,#C5DEFF);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+    .app-icon img{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block}
+    .app-icon-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:28px}
+    .app-info{flex:1;min-width:0}
+    .app-name{font-size:17px;font-weight:700;color:var(--dark);letter-spacing:-.3px;margin-bottom:2px}
+    .app-client{font-size:13px;color:var(--subtle);margin-bottom:6px}
+    .app-badges{display:flex;gap:6px;flex-wrap:wrap}
+    .badge{font-size:11px;font-weight:600;padding:3px 9px;border-radius:100px;letter-spacing:.2px}
+    .badge-live{background:#E8F9EE;color:#1A8040}
+    .app-desc{font-size:14px;color:var(--subtle);line-height:1.5}
+    .app-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;flex-wrap:wrap;gap:8px}
+    .app-stats{display:flex;gap:14px;flex-wrap:wrap}
+    .app-stat{font-size:13px;color:var(--mid);display:flex;align-items:center;gap:4px;font-weight:500}
+    .app-store-link{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:600;color:var(--blue);text-decoration:none;padding:6px 12px;border-radius:10px;background:var(--blue-light);transition:all .2s;white-space:nowrap}
+    .app-store-link:hover{background:var(--blue);color:#fff}
+
+    #skills{background:var(--white)}
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+    .skill-card{background:var(--bg);border-radius:16px;padding:22px;border:1px solid rgba(0,0,0,.05);transition:transform .2s}
+    .skill-card:hover{transform:translateY(-2px)}
+    .skill-card-icon{font-size:28px;margin-bottom:10px}
+    .skill-card-title{font-size:15px;font-weight:700;color:var(--dark);margin-bottom:10px}
+    .skill-tags{display:flex;flex-wrap:wrap;gap:6px}
+    .skill-tag{font-size:12px;font-weight:500;background:var(--white);color:var(--mid);padding:4px 10px;border-radius:100px;border:1px solid var(--border)}
+
+    #articles{background:var(--bg)}
+    .articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+    .article-card{background:var(--white);border-radius:18px;padding:28px;border:1px solid var(--border);box-shadow:var(--card-shadow);transition:all .25s;text-decoration:none;display:block}
+    .article-card:hover{transform:translateY(-3px);box-shadow:var(--card-shadow-hover);border-color:rgba(0,122,255,.2)}
+    .article-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:14px}
+    .article-card h3{font-size:16px;font-weight:700;color:var(--dark);letter-spacing:-.3px;line-height:1.4;margin-bottom:10px}
+    .article-card p{font-size:13px;color:var(--subtle);line-height:1.6;margin-bottom:16px}
+    .article-meta{display:flex;align-items:center;justify-content:space-between}
+    .article-date{font-size:12px;color:var(--subtle);font-weight:500}
+    .article-read{font-size:12px;font-weight:600;color:var(--blue);display:flex;align-items:center;gap:4px}
+
+    #contact{background:linear-gradient(135deg,#0A0A0F 0%,#0C1B33 50%,#0A0A0F 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
+    #contact::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(0,122,255,.15) 0%,transparent 65%);pointer-events:none}
+    #contact .section-label{color:rgba(255,255,255,.5)}
+    #contact .section-title{color:#fff;margin-bottom:14px}
+    #contact .section-desc{color:rgba(255,255,255,.55);margin:0 auto 40px;max-width:480px}
+    .contact-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+    .contact-link{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:100px;font-size:14px;font-weight:600;text-decoration:none;transition:all .2s}
+    .contact-link-primary{background:var(--blue);color:#fff}
+    .contact-link-primary:hover{background:#0066DD;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,122,255,.4)}
+    .contact-link-ghost{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);color:rgba(255,255,255,.85)}
+    .contact-link-ghost:hover{background:rgba(255,255,255,.15);color:#fff;transform:translateY(-2px)}
+
+    footer{background:var(--dark);color:var(--subtle);text-align:center;padding:24px 5%;font-size:13px}
+
+    /* hamburger */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;z-index:101}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--dark);border-radius:2px;transition:all .3s}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:12px 0;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+    .mobile-menu a{display:block;padding:12px 24px;font-size:15px;font-weight:500;color:var(--dark);text-decoration:none;border-bottom:1px solid var(--bg)}
+    .mobile-menu a:last-child{border-bottom:none}
+    .mobile-menu a:hover{color:var(--blue);background:var(--blue-light)}
+    .mobile-menu.open{display:block}
+
+    /* ── scroll-to-top ─────────────────────────────────────────── */
+    #scrollTop{
+      position:fixed;bottom:28px;right:24px;
+      width:46px;height:46px;border-radius:50%;
+      background:var(--blue);color:#fff;border:none;cursor:pointer;
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 4px 20px rgba(0,122,255,.5);
+      z-index:1000;
+      opacity:0;visibility:hidden;
+      transition:opacity .3s,visibility .3s,transform .2s,background .2s;
+    }
+    #scrollTop.show{opacity:1;visibility:visible;}
+    #scrollTop:hover{background:#0055CC;transform:translateY(-3px);}
+
+    /* ── share speed-dial ──────────────────────────────────────── */
+    #shareBtn{
+      position:fixed;bottom:84px;right:24px;
+      width:46px;height:46px;border-radius:50%;
+      background:#fff;color:var(--dark);
+      border:1.5px solid var(--border);cursor:pointer;
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 4px 16px rgba(0,0,0,.12);
+      z-index:1000;
+      transition:background .2s,color .2s,border-color .2s,transform .2s;
+    }
+    #shareBtn:hover,#shareBtn.open{background:var(--blue);color:#fff;border-color:var(--blue);}
+    #shareBtn:hover{transform:translateY(-2px);}
+
+    .share-actions{
+      position:fixed;bottom:140px;right:24px;
+      display:flex;flex-direction:column;align-items:flex-end;gap:10px;
+      z-index:999;pointer-events:none;
+    }
+    .share-action{
+      display:flex;align-items:center;gap:10px;
+      opacity:0;transform:translateY(10px) scale(.95);
+      transition:opacity .2s,transform .2s;
+    }
+    .share-actions.open .share-action{opacity:1;transform:translateY(0) scale(1);pointer-events:all;}
+    .share-actions.open .share-action:nth-child(1){transition-delay:.05s;}
+    .share-actions.open .share-action:nth-child(2){transition-delay:.1s;}
+    .share-actions.open .share-action:nth-child(3){transition-delay:.15s;}
+    .sa-label{
+      background:var(--dark);color:#fff;
+      font-size:12px;font-weight:600;
+      padding:5px 12px;border-radius:8px;
+      white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.2);
+    }
+    .sa-btn{
+      width:42px;height:42px;border-radius:50%;border:none;cursor:pointer;
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 3px 12px rgba(0,0,0,.15);flex-shrink:0;
+      transition:transform .15s,box-shadow .15s;text-decoration:none;
+    }
+    .sa-btn:hover{transform:scale(1.1);box-shadow:0 6px 18px rgba(0,0,0,.2);}
+    .sa-blue{background:#ff9933;color:#fff;}
+    .sa-green{background:#1D7E4A;color:#fff;}
+    .sa-dark{background:#996633;color:#fff;}
+
+    .share-backdrop{
+      display:none;position:fixed;inset:0;z-index:998;
+    }
+    .share-backdrop.open{display:block;}
+
+    #achievements{background:var(--white)}
+    .ach-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:0}
+    .ach-card{background:var(--bg);border-radius:18px;padding:26px 24px;border:1.5px solid transparent;transition:all .25s;position:relative;overflow:hidden}
+    .ach-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:18px 18px 0 0;background:linear-gradient(90deg,var(--blue),var(--blue-mid))}
+    .ach-card:hover{border-color:rgba(0,122,255,.2);background:var(--blue-light);transform:translateY(-3px);box-shadow:var(--card-shadow-hover)}
+    .ach-icon{font-size:30px;margin-bottom:14px;display:block}
+    .ach-num{font-size:34px;font-weight:700;letter-spacing:-1.5px;color:var(--dark);line-height:1}
+    .ach-num span{color:var(--blue)}
+    .ach-label{font-size:15px;font-weight:600;color:var(--dark);margin-top:6px;margin-bottom:6px}
+    .ach-desc{font-size:13px;color:var(--subtle);line-height:1.55}
+
+    @media(max-width:700px){
+      .stats-inner{grid-template-columns:repeat(2,1fr)}
+      .nav-links{display:none}
+      .hamburger{display:flex}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-brand">Satish</span>
+  <div class="nav-links">
+    <a href="#experience">Experience</a>
+    <a href="#apps">Apps</a>
+    <a href="#skills">Skills</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#articles">Articles</a>
+    <a href="https://github.com/Satish24sp" target="_blank">GitHub</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile dropdown menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#experience"  onclick="closeMenu()">Experience</a>
+  <a href="#apps"        onclick="closeMenu()">Apps</a>
+  <a href="#skills"      onclick="closeMenu()">Skills</a>
+  <a href="#achievements" onclick="closeMenu()">Achievements</a>
+  <a href="#articles"    onclick="closeMenu()">Articles</a>
+  <a href="https://github.com/Satish24sp" target="_blank" onclick="closeMenu()">GitHub</a>
+  <a href="#contact"     onclick="closeMenu()">Contact</a>
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Open to Senior / Lead iOS roles</div>
+    <h1>Senior iOS<br/><span>Engineer</span></h1>
+    <p class="hero-sub">7+ years shipping Swift apps used by millions — across Nigeria, Oman, Maldives, Panama, and Puerto Rico.</p>
+    <div class="hero-ctas">
+      <a href="#apps" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        View Apps
+      </a>
+      <a href="./Resource/Satish_Senior_iOS_Resume.pdf" download class="btn-outline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Resume
+      </a>
+      <a href="https://linkedin.com/in/satish-iosdev" target="_blank" class="btn-outline">LinkedIn Profile</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div><div class="stat-num">7+</div><div class="stat-label">Years iOS</div></div>
+    <div><div class="stat-num">15+</div><div class="stat-label">Apps Shipped</div></div>
+    <div><div class="stat-num">9M+</div><div class="stat-label">Downloads</div></div>
+    <div><div class="stat-num">6</div><div class="stat-label">Countries</div></div>
+  </div>
+</div>
+
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-label">Career</div>
+    <h2 class="section-title">Work Experience</h2>
+    <p class="section-desc">Building iOS products at scale — from fintech to telecom, across emerging and global markets.</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-meta"><span class="tl-company">Paytm (One97 Communications)</span><span class="tl-dates">Jun 2022 – Present</span></div>
+        <div class="tl-role">Senior Software Developer – iOS · Noida</div>
+        <ul class="tl-points">
+          <li>Owned Wallet & Self-Care modules for 2M+ active users — AES-256 encrypted, full App Store lifecycle, 4.7★ / 2.7M ratings.</li>
+          <li>Shipped 6 international enterprise apps across Nigeria, Oman, Maldives, Panama & Puerto Rico — 5M+ combined downloads, top-rated: My Liberty 4.8★/20K ratings and Mi Mas 4.6★/446 ratings.</li>
+          <li>Crash rate ↓35% (Crashlytics); screen load ↑40% (NSCache + Core Data + URLSession pre-fetch); AES-256 for PCI DSS compliance.</li>
+          <li>Combine reactive data binding, AVFoundation live video/VOD, Firebase + PubNub real-time chat at production scale.</li>
+          <li>Swift Testing (WWDC 2024) migration; mentored 2 junior engineers; MVVM + Coordinator across team of 5.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-meta"><span class="tl-company">Appsquadz Software Pvt. Ltd.</span><span class="tl-dates">May 2020 – May 2022</span></div>
+        <div class="tl-role">Senior Software Developer – iOS · Noida</div>
+        <ul class="tl-points">
+          <li>Shipped 7 iOS apps (all live on App Store) across ed-tech & entertainment — DAMS 3.6★/6.2K ratings · Utkarsh 3.6★/3K ratings · Rahul's IAS 4.6★/565 ratings · Made Easy 3.8★/477 ratings · Next IAS 3.7★/417 ratings · Sanskar TV 4.1★/30 ratings · Learn Forward 5★/3 ratings.</li>
+          <li>StoreKit + Paytm + Razorpay subscription flows; AES-256 offline-first Core Data architecture; Firebase + PubNub real-time chat with multimedia.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-meta"><span class="tl-company">Oodles Technologies Pvt. Ltd.</span><span class="tl-dates">Aug 2018 – Apr 2020</span></div>
+        <div class="tl-role">Associate Software Developer – iOS · Gurugram</div>
+        <ul class="tl-points">
+          <li>Built 2 crypto exchange apps — EzBitex 4.2★/627 ratings & Cerberex 4.0★/912 ratings: TradingView OHLC charts, real-time limit/market orders, AES-encrypted wallets, Google 2FA.</li>
+          <li>MVC → MVVM refactor with XCTest; Crashlytics pipeline (~50% faster diagnosis); Branch.io deep links.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="apps">
+  <div class="section-inner">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">App Portfolio</h2>
+    <p class="section-desc">15 production apps shipped across telecom, fintech, ed-tech, entertainment, and crypto — all live on the App Store.</p>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All Apps</button>
+      <button class="filter-btn" data-filter="paytm">Paytm</button>
+      <button class="filter-btn" data-filter="appsquadz">Appsquadz</button>
+      <button class="filter-btn" data-filter="oodles">Oodles</button>
+      <button class="filter-btn" data-filter="live">Live on App Store</button>
+    </div>
+    <div class="apps-grid" id="appsGrid"></div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-label">Technical</div>
+    <h2 class="section-title">Skills & Stack</h2>
+    <p class="section-desc">A focused, production-proven iOS skill set built over 7+ years.</p>
+    <div class="skills-grid">
+      <div class="skill-card"><div class="skill-card-icon">⚡</div><div class="skill-card-title">Languages</div><div class="skill-tags"><span class="skill-tag">Swift 5.x</span><span class="skill-tag">Objective-C</span></div></div>
+      <div class="skill-card"><div class="skill-card-icon">🏗</div><div class="skill-card-title">Architecture</div><div class="skill-tags"><span class="skill-tag">MVVM + Coordinator</span><span class="skill-tag">MVC</span><span class="skill-tag">Clean Architecture</span><span class="skill-tag">SOLID</span></div></div>
+      <div class="skill-card"><div class="skill-card-icon">📱</div><div class="skill-card-title">Apple Frameworks</div><div class="skill-tags"><span class="skill-tag">UIKit</span><span class="skill-tag">SwiftUI</span><span class="skill-tag">Combine</span><span class="skill-tag">AVFoundation</span><span class="skill-tag">Core Data</span><span class="skill-tag">Core Animation</span><span class="skill-tag">StoreKit</span></div></div>
+      <div class="skill-card"><div class="skill-card-icon">🔒</div><div class="skill-card-title">Security & Payments</div><div class="skill-tags"><span class="skill-tag">AES-256 Encryption</span><span class="skill-tag">PCI Compliance</span><span class="skill-tag">Paytm SDK</span><span class="skill-tag">Razorpay SDK</span></div></div>
+      <div class="skill-card"><div class="skill-card-icon">🔥</div><div class="skill-card-title">Real-Time & Cloud</div><div class="skill-tags"><span class="skill-tag">Firebase Realtime DB</span><span class="skill-tag">Firebase Crashlytics</span><span class="skill-tag">PubNub SDK</span><span class="skill-tag">AWS</span></div></div>
+      <div class="skill-card"><div class="skill-card-icon">🧪</div><div class="skill-card-title">Testing & Tooling</div><div class="skill-tags"><span class="skill-tag">Swift Testing (WWDC 24)</span><span class="skill-tag">XCTest</span><span class="skill-tag">SwiftLint</span><span class="skill-tag">SonarQube</span><span class="skill-tag">Instruments</span><span class="skill-tag">SPM / CocoaPods</span></div></div>
+      <div class="skill-card"><div class="skill-card-icon">🚀</div><div class="skill-card-title">Performance Optimization</div><div class="skill-tags"><span class="skill-tag">Instruments Profiling</span><span class="skill-tag">CPU / Memory Analysis</span><span class="skill-tag">Lazy Loading</span><span class="skill-tag">Background Pre-fetch</span><span class="skill-tag">Screen Load ↓40%</span></div></div>
+      <div class="skill-card"><div class="skill-card-icon">🧹</div><div class="skill-card-title">Memory Management</div><div class="skill-tags"><span class="skill-tag">ARC</span><span class="skill-tag">Retain Cycle Detection</span><span class="skill-tag">NSCache</span><span class="skill-tag">Weak / Unowned References</span><span class="skill-tag">Memory Leak Debugging</span></div></div>
+      <div class="skill-card"><div class="skill-card-icon">🏛️</div><div class="skill-card-title">App Architecture</div><div class="skill-tags"><span class="skill-tag">MVVM + Coordinator</span><span class="skill-tag">Repository Pattern</span><span class="skill-tag">Protocol-Oriented Design</span><span class="skill-tag">Feature Modules</span></div></div>
+      <div class="skill-card"><div class="skill-card-icon">📦</div><div class="skill-card-title">Modularization</div><div class="skill-tags"><span class="skill-tag">Swift Package Manager</span><span class="skill-tag">Framework Targets</span><span class="skill-tag">Feature Isolation</span><span class="skill-tag">Build Time Reduction</span></div></div>
+      <div class="skill-card"><div class="skill-card-icon">💉</div><div class="skill-card-title">Dependency Injection</div><div class="skill-tags"><span class="skill-tag">Constructor Injection</span><span class="skill-tag">Protocol Mocking</span><span class="skill-tag">Service Locator</span><span class="skill-tag">Testability</span></div></div>
+      <div class="skill-card"><div class="skill-card-icon">🌐</div><div class="skill-card-title">Networking Layer Design</div><div class="skill-tags"><span class="skill-tag">URLSession</span><span class="skill-tag">REST API</span><span class="skill-tag">Codable / JSON</span><span class="skill-tag">Interceptors</span><span class="skill-tag">Retry Logic</span><span class="skill-tag">WebSocket</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="section-inner">
+    <div class="section-label">Impact</div>
+    <h2 class="section-title">Achievements</h2>
+    <p class="section-desc">Numbers that reflect real-world engineering impact across 7+ years of iOS development.</p>
+    <div class="ach-grid">
+
+      <div class="ach-card">
+        <span class="ach-icon">📱</span>
+        <div class="ach-num">15<span>+</span></div>
+        <div class="ach-label">iOS Apps Shipped</div>
+        <div class="ach-desc">Production apps across fintech, telecom, ed-tech, entertainment & crypto — all live on the App Store.</div>
+      </div>
+
+      <div class="ach-card">
+        <span class="ach-icon">🌍</span>
+        <div class="ach-num">9<span>M+</span></div>
+        <div class="ach-label">Combined Downloads</div>
+        <div class="ach-desc">Apps deployed across 6 countries — India, Nigeria, Oman, Maldives, Panama & Puerto Rico.</div>
+      </div>
+
+      <div class="ach-card">
+        <span class="ach-icon">👥</span>
+        <div class="ach-num">2<span>M+</span></div>
+        <div class="ach-label">Monthly Active Users</div>
+        <div class="ach-desc">Owned Paytm's Wallet & Self-Care modules serving 2M+ MAU — full SDLC ownership, AES-256 security.</div>
+      </div>
+
+      <div class="ach-card">
+        <span class="ach-icon">⚡</span>
+        <div class="ach-num">40<span>%</span></div>
+        <div class="ach-label">Faster Screen Load</div>
+        <div class="ach-desc">Three-layer caching pipeline (NSCache + Core Data + URLSession pre-fetch) cut load latency by 40%.</div>
+      </div>
+
+      <div class="ach-card">
+        <span class="ach-icon">🛡️</span>
+        <div class="ach-num">35<span>%</span></div>
+        <div class="ach-label">Crash Rate Reduced</div>
+        <div class="ach-desc">Systematic Crashlytics triage + Xcode symbolication with regression-gating before every App Store release.</div>
+      </div>
+
+      <div class="ach-card">
+        <span class="ach-icon">⭐</span>
+        <div class="ach-num">4.8<span>★</span></div>
+        <div class="ach-label">Top App Store Rating</div>
+        <div class="ach-desc">My Liberty App — 4.8★ with 523K ratings. Paytm Secure UPI — 4.7★ with 2.7M ratings.</div>
+      </div>
+
+      <div class="ach-card">
+        <span class="ach-icon">🧠</span>
+        <div class="ach-num">5<span> eng</span></div>
+        <div class="ach-label">Led a team of 5 iOS engineers</div>
+        <div class="ach-desc">Led 5-engineer iOS team at Paytm. Mentored 2 junior engineers via code reviews, architecture walkthroughs & Swift standards — PR cycles ↓25%.</div>
+      </div>
+
+      <div class="ach-card">
+        <span class="ach-icon">🔒</span>
+        <div class="ach-num">PCI<span> DSS</span></div>
+        <div class="ach-label">Security Compliance</div>
+        <div class="ach-desc">AES-256 encryption end-to-end across 5 enterprise payment apps, achieving PCI DSS compliance for 2M+ users.</div>
+      </div>
+
+      <div class="ach-card">
+        <span class="ach-icon">🚀</span>
+        <div class="ach-num">3<span> cos</span></div>
+        <div class="ach-label">Companies & Growth</div>
+        <div class="ach-desc">Grew from Associate → Senior iOS Engineer across Oodles Technologies, Appsquadz, and Paytm over 7+ years.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="articles">
+  <div class="section-inner">
+    <div class="section-label">Writing</div>
+    <h2 class="section-title">Engineering Articles</h2>
+    <p class="section-desc">Deep dives on Swift, iOS architecture, and the evolving Apple ecosystem — published on Medium.</p>
+    <div class="articles-grid">
+
+      <a class="article-card" href="https://medium.com/stackademic/disable-or-opt-out-liquid-glass-in-swiftui-and-uikit-ios-26-5c6d55d3e8e5" target="_blank">
+        <span class="article-tag" style="background:#E8F2FF;color:#0A74DA">SwiftUI · iOS 26</span>
+        <h3>Disable or Opt-Out Liquid Glass in SwiftUI and UIKit | iOS 26</h3>
+        <p>How to selectively disable Apple's new Liquid Glass material in iOS 26 — both declarative SwiftUI modifiers and UIKit-level overrides explained with code examples.</p>
+        <div class="article-meta">
+          <span class="article-date">Jan 2026</span>
+          <span class="article-read">Read on Medium <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </div>
+      </a>
+
+      <a class="article-card" href="https://medium.com/@satish24sp/understanding-the-difference-between-spm-frameworks-cocoapods-and-build-plug-ins-in-swift-1940eb103ae5" target="_blank">
+        <span class="article-tag" style="background:#F0EDFF;color:#5B21B6">Modularization</span>
+        <h3>Understanding the Difference Between SPM, Frameworks, CocoaPods, and Build Plug-ins in Swift</h3>
+        <p>A practical guide to choosing the right dependency management and modularization tool for scalable iOS codebases — covering SPM, .xcframework, CocoaPods, and build plug-ins side by side.</p>
+        <div class="article-meta">
+          <span class="article-date">Dec 2025</span>
+          <span class="article-read">Read on Medium <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </div>
+      </a>
+
+      <a class="article-card" href="https://medium.com/@satish24sp/wwdc-2025-recap-apple-intelligence-ios-26-xcode-26-swift-6-the-liquid-glass-era-a8134391abad" target="_blank">
+        <span class="article-tag" style="background:#E8F8EF;color:#1D7E4A">WWDC 2025</span>
+        <h3>WWDC 2025 Recap: Apple Intelligence, iOS 26, Xcode 26, Swift 6 & The Liquid Glass Era</h3>
+        <p>A developer-focused breakdown of every major WWDC 2025 announcement — Apple Intelligence APIs, Swift 6 concurrency, the new Liquid Glass design system, and what it means for shipping apps today.</p>
+        <div class="article-meta">
+          <span class="article-date">Jun 2025</span>
+          <span class="article-read">Read on Medium <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </div>
+      </a>
+
+      <a class="article-card" href="https://medium.com/@satish24sp/understanding-pros-and-cons-of-singleton-pattern-in-swift-46b7e1f090fa" target="_blank">
+        <span class="article-tag" style="background:#FFF0F6;color:#B0006E">Design Patterns</span>
+        <h3>Understanding Pros and Cons of Singleton Pattern in Swift</h3>
+        <p>When Singleton saves you and when it hurts you — a nuanced look at thread safety, testability, global state, and real-world alternatives like dependency injection in Swift.</p>
+        <div class="article-meta">
+          <span class="article-date">Jun 2025</span>
+          <span class="article-read">Read on Medium <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </div>
+      </a>
+
+      <a class="article-card" href="https://medium.com/stackademic/cocoapods-is-entering-read-only-mode-and-thats-a-good-thing-for-ios-3a655b7293c5" target="_blank">
+        <span class="article-tag" style="background:#FFF4E6;color:#B05A00">Tooling</span>
+        <h3>CocoaPods Is Entering Read-Only Mode — And That's a Good Thing for iOS</h3>
+        <p>Why CocoaPods going read-only is the nudge the iOS ecosystem needed to fully embrace Swift Package Manager — migration strategies, gotchas, and what to do with private pods.</p>
+        <div class="article-meta">
+          <span class="article-date">Jan 2025</span>
+          <span class="article-read">Read on Medium <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </div>
+      </a>
+
+      <a class="article-card" href="https://medium.com/@satish24sp/firebase-dynamic-link-deprecation-and-its-alternates-81d72e33734" target="_blank">
+        <span class="article-tag" style="background:#E8F4FD;color:#0A74DA">Firebase</span>
+        <h3>Firebase Dynamic Link Deprecation and Its Alternates</h3>
+        <p>Firebase Dynamic Links are gone — this guide covers what they were, real migration paths (Branch.io, App Clips, Universal Links), and how to choose the right alternative for your app's deep-linking needs.</p>
+        <div class="article-meta">
+          <span class="article-date">Sep 2023</span>
+          <span class="article-read">Read on Medium <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-inner" style="position:relative;z-index:1">
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">Let's <em style="font-style:normal;color:var(--blue)">Build</em> Together</h2>
+    <p class="section-desc">Open to Senior iOS Engineer roles at product companies. Currently based in New Delhi, open to remote.</p>
+    <div class="contact-links">
+      <a class="contact-link contact-link-primary" href="mailto:satish24sp@gmail.com">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        satish24sp@gmail.com
+      </a>
+      <a class="contact-link contact-link-ghost" href="https://linkedin.com/in/satish-iosdev" target="_blank">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a class="contact-link contact-link-ghost" href="https://github.com/Satish24sp" target="_blank">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+      <a class="contact-link contact-link-ghost" href="https://medium.com/@satish24sp" target="_blank">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M2.846 6.887c.03-.295-.083-.586-.303-.784l-2.24-2.7v-.403h6.958l5.378 11.795 4.728-11.795h6.633v.403l-1.916 1.837c-.165.126-.247.333-.213.538v13.498c-.034.204.048.411.213.537l1.871 1.837v.403h-9.412v-.403l1.939-1.882c.19-.19.19-.246.19-.537v-10.91l-5.389 13.688h-.728l-6.275-13.688v9.174c-.052.385.076.774.347 1.052l2.521 3.058v.404h-7.148v-.404l2.521-3.058c.27-.279.39-.67.325-1.052v-10.608z"/></svg>
+        Medium
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer><p>Built by Satish · Senior iOS Engineer · New Delhi, India</p></footer>
+
+<!-- Share speed-dial -->
+<div class="share-backdrop" id="shareBackdrop" onclick="closeShare()"></div>
+<div class="share-actions" id="shareActions">
+  <div class="share-action">
+    <span class="sa-label">Share Portfolio</span>
+    <button class="sa-btn sa-blue" onclick="doShare()" title="Share portfolio">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+  <div class="share-action">
+    <span class="sa-label">Copy Link</span>
+    <button class="sa-btn sa-green" id="copyBtn" onclick="copyLink()" title="Copy portfolio link">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+    </button>
+  </div>
+  <div class="share-action">
+    <span class="sa-label">Download Resume</span>
+    <a class="sa-btn sa-dark" href="./Resource/Satish_Senior_iOS_Resume.pdf" download title="Download resume">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    </a>
+  </div>
+</div>
+
+<button id="shareBtn" onclick="toggleShare()" title="Share">
+  <svg id="shareBtnIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+</button>
+
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+const APPS = [
+  // ── PAYTM ─────────────────────────────────────────────────────────────────
+  { id:'paytm',     img:'paytm.webp',           name:'Paytm — Secure UPI Payments', client:'One97 Communications Ltd.',      cat:'Fintech',       catClr:['#E8F4FD','#0A74DA'], country:'India 🇮🇳',        co:'paytm',     dl:'2M+ downloads',    rating:'4.7', rc:'2.7M ratings', desc:'Owned Wallet & Self-Care modules end-to-end — AES-256 encrypted transactions, KYC flows, account management for 2M+ active users. Led 5-engineer iOS team.',                                            url:'https://apps.apple.com/in/app/paytm-secure-upi-payments/id473941634'  },
+  { id:'myliberty', img:'myLiberty.webp',        name:'My Liberty App',              client:'Liberty Puerto Rico',            cat:'Telecom',       catClr:['#EDF7EE','#1A8040'], country:'Puerto Rico 🇵🇷',  co:'paytm',     dl:'523K+ downloads',  rating:'4.8', rc:'20K ratings',   desc:'Cable & mobile self-care SuperApp — bill pay, data recharge, usage tracking, AI chatbot (Libi), biometric login, roaming activation, real-time outage alerts.',                                          url:'https://apps.apple.com/us/app/my-liberty-app/id1637472836'            },
+  { id:'mimas',     img:'mimas.webp',            name:'Mi Mas',                      client:'Cable & Wireless Panama',        cat:'Telecom',       catClr:['#EDF7EE','#1A8040'], country:'Panama 🇵🇦',        co:'paytm',     dl:'438K+ downloads',  rating:'4.6', rc:'446 ratings',   desc:'Telecom SuperApp: bill pay, recharges, streaming bundles (Disney+, Max, Paramount+), Yappy payments, loyalty rewards, autopay, biometric login.',                                                         url:'https://apps.apple.com/us/app/mi-mas/id1391146262'                    },
+  { id:'ooredoo',   img:'ooredooMaldives.webp',  name:'Ooredoo Maldives',            client:'Ooredoo Maldives Pvt. Ltd.',     cat:'Telecom',       catClr:['#EDF7EE','#1A8040'], country:'Maldives 🇲🇻',      co:'paytm',     dl:'350K+ downloads',  rating:'3.0', rc:'383K ratings',  desc:'Telecom SuperApp — mFaisaa digital wallet, QR scan-to-pay, eSIM activation, Nujoom loyalty rewards, online marketplace, live chat support.',                                                              url:'https://apps.apple.com/us/app/ooredoo-maldives/id988350991'           },
+  { id:'glocafe',   img:'glocafe.webp',          name:'Glo Café',                    client:'Globacom Nigeria',               cat:'Telecom',       catClr:['#EDF7EE','#1A8040'], country:'Nigeria 🇳🇬',        co:'paytm',     dl:'1.89M+ downloads', rating:'2.5', rc:'2.1K ratings',  desc:'Telecom self-care SuperApp for Nigeria\'s largest mobile network — account management, data/airtime recharge, usage analytics, store locator, in-app chat.',                                               url:'https://apps.apple.com/ng/app/glo-caf%C3%A9/id1236642119'             },
+  { id:'payplus',   img:'payplus.webp',          name:'Pay+',                        client:'National Bank of Oman',          cat:'Fintech',       catClr:['#E8F4FD','#0A74DA'], country:'Oman 🇴🇲',          co:'paytm',     dl:'1.2M+ downloads',  rating:'3.1', rc:'206 ratings',   desc:'Fintech mobile wallet — QR scan-to-pay, P2P transfers, MoneyGram remittance to 40+ countries, AES-256 encrypted onboarding, biometric auth.',                                                            url:'https://apps.apple.com/om/app/pay/id1489839436'                       },
+  // ── APPSQUADZ ─────────────────────────────────────────────────────────────
+  { id:'sanskar',   img:'sanskarTV.webp',        name:'Sanskar TV',                  client:"India's No.1 Spiritual Channel", cat:'Entertainment', catClr:['#FFF4E6','#B05A00'], country:'India 🇮🇳',        co:'appsquadz', dl:'983K+ downloads',  rating:'4.1', rc:'30 ratings',    desc:'Live Pravachan streaming, devotional audio/video library (Bhajans, Mantras, Kirtans), PiP playback, StoreKit in-app purchases, Panchang calendar.',                                                       url:'https://apps.apple.com/in/app/sanskar-tv-app/id1497508487'            },
+  { id:'dams',      img:'dams.webp',             name:'DAMS: NEET PG, FMGE',         client:'Delhi Academy of Med. Sciences', cat:'EdTech',        catClr:['#FFF0F6','#B0006E'], country:'India 🇮🇳',        co:'appsquadz', dl:'425K+ downloads',  rating:'3.6', rc:'6.2K ratings',  desc:'Medical entrance exam prep (NEET PG, FMGE) — live classes, recorded lectures, test series, study material, offline access, Firebase notifications.',                                                      url:'https://apps.apple.com/in/app/dams-neet-pg-fmge/id1263112084'         },
+  { id:'rahulias',  img:'rahulIAS.webp',         name:"Rahul's IAS",                 client:'Rahul IAS Institute',            cat:'EdTech',        catClr:['#FFF0F6','#B0006E'], country:'India 🇮🇳',        co:'appsquadz', dl:'56K+ downloads',   rating:'4.6', rc:'565 ratings',   desc:'IAS & UPSC Civil Services prep — live classes, video courses, study material (PDF/eBook), quizzes, in-app purchase, offline access, Firebase push notifications.',                                         url:'https://apps.apple.com/in/app/rahuls-ias/id1514762100'                },
+  { id:'utkarsh',   img:'utkarsh.webp',          name:'Utkarsh: Govt Jobs & Exam Prep', client:'Utkarsh Classes',            cat:'EdTech',        catClr:['#FFF0F6','#B0006E'], country:'India 🇮🇳',        co:'appsquadz', dl:'1.3M+ downloads',  rating:'3.6', rc:'3K ratings',    desc:'Government jobs exam prep (SSC, Banking, Railways) — live streaming (AWS), offline video/PDF, QR-based content, PDF annotation, AES-encrypted storage.',                                                  url:'https://apps.apple.com/in/app/utkarsh-govt-jobs-exam-prep/id1446577039'},
+  { id:'nextias',   img:'nextIAS.webp',          name:'Next IAS',                    client:'Next IAS Institute',             cat:'EdTech',        catClr:['#FFF0F6','#B0006E'], country:'India 🇮🇳',        co:'appsquadz', dl:'23K+ downloads',   rating:'3.7', rc:'417 ratings',   desc:'UPSC Civil Services exam prep — live & recorded classes, current affairs, test series, study notes (PDF/eBook), offline access, Razorpay subscription.',                                                  url:'https://apps.apple.com/in/app/next-ias/id1527559034'                  },
+  { id:'madeeasy',  img:'madeEasy.webp',         name:'Made Easy',                   client:'MADE EASY Group',                cat:'EdTech',        catClr:['#FFF0F6','#B0006E'], country:'India 🇮🇳',        co:'appsquadz', dl:'42K+ downloads',   rating:'3.8', rc:'477 ratings',   desc:'Engineering exam prep (GATE, ESE, SSC JE) — live & recorded courses, in-app purchase (StoreKit + Paytm), Firebase chat, offline video/PDF downloads, quizzes.',                                          url:'https://apps.apple.com/in/app/made-easy/id1513945642'                 },
+  { id:'learnfwd',  img:'learnForward.webp',     name:'Learn Forward',               client:'Learn Forward',                  cat:'EdTech',        catClr:['#FFF0F6','#B0006E'], country:'India 🇮🇳',        co:'appsquadz', dl:'13K+ downloads',   rating:'5.0', rc:'3 ratings',     desc:'QR-scan to download zip-packaged books, native PDF/ePub reader with annotation (pen, highlighter, bookmarks, indexing), live streaming, Firebase chat.',                                                  url:'https://apps.apple.com/in/app/learn-forward/id1579632963'             },
+  // ── OODLES ────────────────────────────────────────────────────────────────
+  { id:'ezbitex',   img:'ezbitex.webp',          name:'EzBitex',                     client:'EZBitex Exchange',               cat:'Crypto',        catClr:['#F0EDFF','#5B21B6'], country:'Global',            co:'oodles',    dl:'9K+ downloads',    rating:'4.2', rc:'627 ratings',   desc:'Crypto/fiat exchange — live OHLC/candlestick charts, limit & market orders, AES-encrypted wallet management, Google 2FA, OTP verification, Branch.io referral.',                                          url:'https://apps.apple.com/us/app/ezbitex/id1369920230'                   },
+  { id:'cerberex',  img:'cerberex.webp',         name:'Cerberex',                    client:'Cerberex Exchange',              cat:'Crypto',        catClr:['#F0EDFF','#5B21B6'], country:'Global',            co:'oodles',    dl:'6K+ downloads',    rating:'4.0', rc:'912 ratings',   desc:'Advanced crypto trading — TradingView OHLC/candlestick charts, full wallet management, real-time order book, Google 2FA + OTP, Apple Push Notifications.',                                               url:'https://apps.apple.com/us/app/cerberex/id1470219479'                  },
+];
+
+// Icons loaded from local Resource/AppsImage/ — no API calls needed
+function loadIcons() {
+  for (const a of APPS) {
+    if (!a.img) continue;
+    const el = document.getElementById('icon-' + a.id);
+    if (!el) continue;
+    const img = new Image();
+    img.onload = () => {
+      el.innerHTML = '';
+      img.style.cssText = 'width:100%;height:100%;border-radius:inherit;display:block;object-fit:cover';
+      el.appendChild(img);
+    };
+    img.onerror = () => {}; // keep emoji placeholder if file missing
+    img.src = './Resource/AppsImage/' + a.img;
+  }
+}
+
+function stars(r) {
+  if (!r) return '';
+  const n = parseFloat(r);
+  let s = '';
+  for (let i = 1; i <= 5; i++) {
+    if (n >= i) {
+      s += '<span style="color:#FF9500">★</span>';
+    } else if (n >= i - 0.5) {
+      // half star using a split gradient trick
+      s += '<span style="background:linear-gradient(90deg,#FF9500 50%,#D1D1D6 50%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">★</span>';
+    } else {
+      s += '<span style="color:#D1D1D6">★</span>';
+    }
+  }
+  return s;
+}
+
+function buildCard(a) {
+  const isLive = !!a.url;
+  const statsHtml = [
+    a.dl ? `<span class="app-stat">⬇ ${a.dl}</span>` : '',
+    a.rating ? `<span class="app-stat">${stars(a.rating)} ${a.rating}${a.rc ? ' · ' + a.rc : ''}</span>` : ''
+  ].filter(Boolean).join('');
+  return `<div class="app-card" data-company="${a.co}" data-live="${isLive}">
+    <div class="app-card-top">
+      <div class="app-icon" id="icon-${a.id}">
+        <div class="app-icon-placeholder">${a.name.charAt(0)}</div>
+      </div>
+      <div class="app-info">
+        <div class="app-name">${a.name}</div>
+        <div class="app-client">${a.client}</div>
+        <div class="app-badges">
+          <span class="badge" style="background:${a.catClr[0]};color:${a.catClr[1]};font-size:11px;font-weight:600;padding:3px 9px;border-radius:100px">${a.cat}</span>
+          <span class="badge" style="background:#FFF4E6;color:#B05A00;font-size:11px;font-weight:600;padding:3px 9px;border-radius:100px">${a.country}</span>
+          ${isLive ? '<span class="badge badge-live">Live on App Store</span>' : ''}
+        </div>
+      </div>
+    </div>
+    <p class="app-desc">${a.desc}</p>
+    <div class="app-footer">
+      <div class="app-stats">${statsHtml}</div>
+      ${isLive ? `<a class="app-store-link" href="${a.url}" target="_blank"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>App Store</a>` : ''}
+    </div>
+  </div>`;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Build app cards
+  document.getElementById('appsGrid').innerHTML = APPS.map(buildCard).join('');
+  loadIcons();
+
+  // Filter buttons
+  document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.dataset.filter;
+      document.querySelectorAll('.app-card').forEach(function(c) {
+        if (f === 'all') c.classList.remove('hidden');
+        else if (f === 'live') c.classList.toggle('hidden', c.dataset.live !== 'true');
+        else c.classList.toggle('hidden', c.dataset.company !== f);
+      });
+    });
+  });
+});
+
+// ── Share speed-dial ──────────────────────────────────────────────────────
+var shareOpen = false;
+
+function toggleShare() {
+  shareOpen = !shareOpen;
+  document.getElementById('shareActions').classList.toggle('open', shareOpen);
+  document.getElementById('shareBackdrop').classList.toggle('open', shareOpen);
+  document.getElementById('shareBtn').classList.toggle('open', shareOpen);
+  var icon = document.getElementById('shareBtnIcon');
+  icon.innerHTML = shareOpen
+    ? '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>'
+    : '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>';
+}
+
+function closeShare() {
+  shareOpen = false;
+  document.getElementById('shareActions').classList.remove('open');
+  document.getElementById('shareBackdrop').classList.remove('open');
+  document.getElementById('shareBtn').classList.remove('open');
+  document.getElementById('shareBtnIcon').innerHTML = '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>';
+}
+
+function doShare() {
+  closeShare();
+  var data = {
+    title: 'Satish — Senior iOS Engineer',
+    text: 'Check out this iOS developer portfolio',
+    url: 'https://satish24sp.github.io/'
+  };
+  if (navigator.share) {
+    navigator.share(data).catch(function(){});
+  } else {
+    doCopy('https://satish24sp.github.io/');
+  }
+}
+
+function copyLink() {
+  closeShare();
+  doCopy('https://satish24sp.github.io/');
+}
+
+function doCopy(text) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function() {
+      showToast('Link copied!');
+    }).catch(function() { fallbackCopy(text); });
+  } else {
+    fallbackCopy(text);
+  }
+}
+
+function fallbackCopy(text) {
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.cssText = 'position:fixed;top:-9999px;left:-9999px;opacity:0;';
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  try { document.execCommand('copy'); showToast('Link copied!'); } catch(e) {}
+  document.body.removeChild(ta);
+}
+
+function showToast(msg) {
+  var old = document.getElementById('saToast');
+  if (old) document.body.removeChild(old);
+  var t = document.createElement('div');
+  t.id = 'saToast';
+  t.textContent = msg;
+  t.style.cssText = 'position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#1C1C1E;color:#fff;padding:8px 20px;border-radius:100px;font-size:13px;font-weight:600;z-index:99999;pointer-events:none;opacity:0;transition:opacity .25s;';
+  document.body.appendChild(t);
+  requestAnimationFrame(function() {
+    t.style.opacity = '1';
+    setTimeout(function() {
+      t.style.opacity = '0';
+      setTimeout(function() { if (t.parentNode) document.body.removeChild(t); }, 300);
+    }, 2000);
+  });
+}
+
+// ── Scroll-to-top ─────────────────────────────────────────────────────────
+window.addEventListener('scroll', function() {
+  var btn = document.getElementById('scrollTop');
+  if (!btn) return;
+  if (window.pageYOffset > 300) {
+    btn.classList.add('show');
+  } else {
+    btn.classList.remove('show');
+  }
+}, { passive: true });
+
+// ── Hamburger menu ────────────────────────────────────────────────────────
+function toggleMenu() {
+  document.getElementById('hamburger').classList.toggle('open');
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+</script>
+</body>
+</html>
