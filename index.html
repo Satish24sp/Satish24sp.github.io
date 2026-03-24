@@ -247,6 +247,30 @@
       .nav-links{display:none}
       .hamburger{display:flex}
     }
+
+    /* ── Resume Viewer Modal ───────────────────────────────────────────── */
+    .rv-backdrop{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:16px}
+    .rv-backdrop.open{display:flex}
+    .rv-modal{background:var(--white);border-radius:20px;width:100%;max-width:720px;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 24px 80px rgba(0,0,0,.25);overflow:hidden;animation:rvIn .25s cubic-bezier(.25,.8,.25,1) both}
+    @keyframes rvIn{from{opacity:0;transform:scale(.96) translateY(12px)}to{opacity:1;transform:none}}
+    .rv-header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--border);flex-shrink:0}
+    .rv-title{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--dark)}
+    .rv-actions{display:flex;align-items:center;gap:8px}
+    .rv-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;padding:7px 14px;border-radius:10px;border:1.5px solid var(--border);background:var(--white);color:var(--dark);cursor:pointer;transition:all .2s;font-family:inherit}
+    .rv-btn:hover{border-color:var(--blue);color:var(--blue)}
+    .rv-btn-primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+    .rv-btn-primary:hover{background:#0066DD;border-color:#0066DD;color:#fff}
+    .rv-close{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;border:none;background:var(--bg);color:var(--subtle);cursor:pointer;transition:all .2s;flex-shrink:0}
+    .rv-close:hover{background:var(--border);color:var(--dark)}
+    .rv-body{flex:1;overflow-y:auto;overflow-x:hidden;background:var(--bg);display:flex;align-items:flex-start;justify-content:center;padding:20px;min-height:200px;position:relative}
+    .rv-body canvas{width:100%;height:auto;border-radius:8px;box-shadow:0 4px 24px rgba(0,0,0,.12);display:block}
+    .rv-status{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:14px;color:var(--subtle);font-weight:500}
+    .rv-footer{display:flex;align-items:center;justify-content:center;gap:16px;padding:12px 16px;border-top:1px solid var(--border);flex-shrink:0}
+    .rv-nav-btn{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:600;padding:7px 16px;border-radius:10px;border:1.5px solid var(--border);background:var(--white);color:var(--dark);cursor:pointer;transition:all .2s;font-family:inherit}
+    .rv-nav-btn:hover:not(:disabled){border-color:var(--blue);color:var(--blue)}
+    .rv-nav-btn:disabled{opacity:.35;cursor:not-allowed}
+    .rv-page-info{font-size:13px;font-weight:600;color:var(--subtle);min-width:48px;text-align:center}
+    @media(max-width:500px){.rv-btn span,.rv-btn-label{display:none}.rv-modal{border-radius:16px}}
   </style>
 </head>
 <body>
@@ -288,10 +312,10 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
         View Apps
       </a>
-      <a href="./Resource/Satish_Senior_iOS_Resume.pdf" download class="btn-outline">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download Resume
-      </a>
+      <button onclick="openResumeViewer()" class="btn-outline" style="cursor:pointer;font-family:inherit">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        View / Download Resume
+      </button>
       <a href="https://linkedin.com/in/satish-iosdev" target="_blank" class="btn-outline">LinkedIn Profile</a>
     </div>
   </div>
@@ -317,7 +341,7 @@
         <div class="tl-meta"><span class="tl-company">Paytm (One97 Communications)</span><span class="tl-dates">Jun 2022 – Present</span></div>
         <div class="tl-role">Senior Software Developer – iOS · Noida</div>
         <ul class="tl-points">
-          <li>Owned Wallet & Self-Care modules for 2M+ active users — AES-256 encrypted, full App Store lifecycle, 4.7★ / 2.7M ratings.</li>
+          <li>Led development of Wallet & Self-Care modules for 2M+ active users — AES-256 encrypted, full App Store lifecycle, 4.7★ / 2.7M ratings.</li>
           <li>Shipped 6 international enterprise apps across Nigeria, Oman, Maldives, Panama & Puerto Rico — 5M+ combined downloads, top-rated: My Liberty 4.8★/20K ratings and Mi Mas 4.6★/446 ratings.</li>
           <li>Crash rate ↓35% (Crashlytics); screen load ↑40% (NSCache + Core Data + URLSession pre-fetch); AES-256 for PCI DSS compliance.</li>
           <li>Combine reactive data binding, AVFoundation live video/VOD, Firebase + PubNub real-time chat at production scale.</li>
@@ -409,7 +433,7 @@
         <span class="ach-icon">👥</span>
         <div class="ach-num">2<span>M+</span></div>
         <div class="ach-label">Monthly Active Users</div>
-        <div class="ach-desc">Owned Paytm's Wallet & Self-Care modules serving 2M+ MAU — full SDLC ownership, AES-256 security.</div>
+        <div class="ach-desc">Led development of Paytm's Wallet & Self-Care modules serving 2M+ MAU — full SDLC ownership, AES-256 security.</div>
       </div>
 
       <div class="ach-card">
@@ -535,9 +559,9 @@
     <h2 class="section-title">Let's <em style="font-style:normal;color:var(--blue)">Build</em> Together</h2>
     <p class="section-desc">Open to Senior iOS Engineer roles at product companies. Currently based in New Delhi, open to remote.</p>
     <div class="contact-links">
-      <a class="contact-link contact-link-primary" href="mailto:satish24sp@gmail.com">
+      <a class="contact-link contact-link-primary" href="/cdn-cgi/l/email-protection#572436233e243f6563242717303a363e3b7934383a">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        satish24sp@gmail.com
+        <span class="__cf_email__" data-cfemail="d4a7b5a0bda7bce6e0a7a494b3b9b5bdb8fab7bbb9">[email&#160;protected]</span>
       </a>
       <a class="contact-link contact-link-ghost" href="https://linkedin.com/in/satish-iosdev" target="_blank">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -588,10 +612,10 @@
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const APPS = [
   // ── PAYTM ─────────────────────────────────────────────────────────────────
-  { id:'paytm',     img:'paytm.webp',           name:'Paytm — Secure UPI Payments', client:'One97 Communications Ltd.',      cat:'Fintech',       catClr:['#E8F4FD','#0A74DA'], country:'India 🇮🇳',        co:'paytm',     dl:'2M+ downloads',    rating:'4.7', rc:'2.7M ratings', desc:'Owned Wallet & Self-Care modules end-to-end — AES-256 encrypted transactions, KYC flows, account management for 2M+ active users. Led 5-engineer iOS team.',                                            url:'https://apps.apple.com/in/app/paytm-secure-upi-payments/id473941634'  },
+  { id:'paytm',     img:'paytm.webp',           name:'Paytm — Secure UPI Payments', client:'One97 Communications Ltd.',      cat:'Fintech',       catClr:['#E8F4FD','#0A74DA'], country:'India 🇮🇳',        co:'paytm',     dl:'2M+ downloads',    rating:'4.7', rc:'2.7M ratings', desc:'Led development of Wallet & Self-Care modules end-to-end — AES-256 encrypted transactions, KYC flows, account management for 2M+ active users. Led 5-engineer iOS team.',                                            url:'https://apps.apple.com/in/app/paytm-secure-upi-payments/id473941634'  },
   { id:'myliberty', img:'myLiberty.webp',        name:'My Liberty App',              client:'Liberty Puerto Rico',            cat:'Telecom',       catClr:['#EDF7EE','#1A8040'], country:'Puerto Rico 🇵🇷',  co:'paytm',     dl:'523K+ downloads',  rating:'4.8', rc:'20K ratings',   desc:'Cable & mobile self-care SuperApp — bill pay, data recharge, usage tracking, AI chatbot (Libi), biometric login, roaming activation, real-time outage alerts.',                                          url:'https://apps.apple.com/us/app/my-liberty-app/id1637472836'            },
   { id:'mimas',     img:'mimas.webp',            name:'Mi Mas',                      client:'Cable & Wireless Panama',        cat:'Telecom',       catClr:['#EDF7EE','#1A8040'], country:'Panama 🇵🇦',        co:'paytm',     dl:'438K+ downloads',  rating:'4.6', rc:'446 ratings',   desc:'Telecom SuperApp: bill pay, recharges, streaming bundles (Disney+, Max, Paramount+), Yappy payments, loyalty rewards, autopay, biometric login.',                                                         url:'https://apps.apple.com/us/app/mi-mas/id1391146262'                    },
   { id:'ooredoo',   img:'ooredooMaldives.webp',  name:'Ooredoo Maldives',            client:'Ooredoo Maldives Pvt. Ltd.',     cat:'Telecom',       catClr:['#EDF7EE','#1A8040'], country:'Maldives 🇲🇻',      co:'paytm',     dl:'350K+ downloads',  rating:'3.0', rc:'383K ratings',  desc:'Telecom SuperApp — mFaisaa digital wallet, QR scan-to-pay, eSIM activation, Nujoom loyalty rewards, online marketplace, live chat support.',                                                              url:'https://apps.apple.com/us/app/ooredoo-maldives/id988350991'           },
@@ -792,6 +816,160 @@ function closeMenu() {
   document.getElementById('hamburger').classList.remove('open');
   document.getElementById('mobileMenu').classList.remove('open');
 }
+
+// ── Active nav highlight via IntersectionObserver ─────────────────────────
+(function() {
+  var sections = document.querySelectorAll('section[id]');
+  var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  var mobileLinks = document.querySelectorAll('.mobile-menu a[href^="#"]');
+  function setActive(id) {
+    navLinks.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href')==='#'+id); });
+    mobileLinks.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href')==='#'+id); });
+  }
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting) setActive(e.target.id); });
+  }, { rootMargin:'-10% 0px -60% 0px', threshold:0 });
+  sections.forEach(function(s){ if(s.id) obs.observe(s); });
+})();
+
+// ── PDF Resume Viewer ─────────────────────────────────────────────────────
+var _pdfLib = null, _pdfDoc = null, _pdfPage = 1, _pdfTotal = 0, _pdfRendering = false;
+var PDF_URL = './Resource/Satish_Senior_iOS_Resume.pdf';
+
+function openResumeViewer() {
+  document.getElementById('resumeModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  if (!_pdfLib) {
+    _loadPdfJs(function() { _loadPdf(); });
+  } else if (!_pdfDoc) {
+    _loadPdf();
+  }
+}
+
+function closeResumeViewer() {
+  document.getElementById('resumeModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function _loadPdfJs(cb) {
+  var s = document.createElement('script');
+  s.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
+  s.onload = function() {
+    _pdfLib = window.pdfjsLib;
+    _pdfLib.GlobalWorkerOptions.workerSrc =
+      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    cb();
+  };
+  document.head.appendChild(s);
+}
+
+function _loadPdf() {
+  _setStatus('Loading…');
+  _pdfLib.getDocument(PDF_URL).promise.then(function(doc) {
+    _pdfDoc = doc;
+    _pdfTotal = doc.numPages;
+    _pdfPage = 1;
+    _renderPage(_pdfPage);
+  }).catch(function() { _setStatus('Could not load PDF.'); });
+}
+
+function _renderPage(num) {
+  if (_pdfRendering) return;
+  _pdfRendering = true;
+  _setStatus('');
+  _pdfDoc.getPage(num).then(function(page) {
+    var wrap = document.getElementById('resumeCanvasWrap');
+    var maxW = wrap.clientWidth - 0;
+    var vp0 = page.getViewport({ scale: 1 });
+    var scale = maxW / vp0.width;
+    var vp = page.getViewport({ scale: scale });
+
+    var canvas = document.getElementById('resumeCanvas');
+    var ctx = canvas.getContext('2d');
+    canvas.width = vp.width;
+    canvas.height = vp.height;
+
+    page.render({ canvasContext: ctx, viewport: vp }).promise.then(function() {
+      _pdfRendering = false;
+      document.getElementById('resumePageInfo').textContent = num + ' / ' + _pdfTotal;
+      document.getElementById('resumePrev').disabled = num <= 1;
+      document.getElementById('resumeNext').disabled = num >= _pdfTotal;
+    });
+  });
+}
+
+function resumePrevPage() {
+  if (_pdfPage > 1) { _pdfPage--; _renderPage(_pdfPage); }
+}
+function resumeNextPage() {
+  if (_pdfPage < _pdfTotal) { _pdfPage++; _renderPage(_pdfPage); }
+}
+
+function _setStatus(msg) {
+  document.getElementById('resumeStatus').textContent = msg;
+}
+
+function downloadResume() {
+  var a = document.createElement('a');
+  a.href = PDF_URL;
+  a.download = 'Satish_Senior_iOS_Resume.pdf';
+  a.click();
+}
+
+function shareResume() {
+  var data = { title: 'Satish — Senior iOS Engineer Resume', text: 'Check out this iOS developer resume', url: 'https://satish24sp.github.io/' };
+  if (navigator.share) { navigator.share(data).catch(function(){}); }
+  else { doCopy('https://satish24sp.github.io/'); }
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeResumeViewer();
+  if (!document.getElementById('resumeModal').classList.contains('open')) return;
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') resumeNextPage();
+  if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   resumePrevPage();
+});
 </script>
+
+<!-- ── Resume Viewer Modal ───────────────────────────────────────────────── -->
+<div id="resumeModal" class="rv-backdrop" onclick="if(event.target===this)closeResumeViewer()">
+  <div class="rv-modal">
+    <div class="rv-header">
+      <div class="rv-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Resume
+      </div>
+      <div class="rv-actions">
+        <button class="rv-btn" onclick="shareResume()" title="Share">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Share
+        </button>
+        <button class="rv-btn rv-btn-primary" onclick="downloadResume()" title="Download">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download
+        </button>
+        <button class="rv-close" onclick="closeResumeViewer()" title="Close">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="rv-body" id="resumeCanvasWrap">
+      <span id="resumeStatus" class="rv-status">Loading…</span>
+      <canvas id="resumeCanvas"></canvas>
+    </div>
+
+    <div class="rv-footer">
+      <button class="rv-nav-btn" id="resumePrev" onclick="resumePrevPage()" disabled>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Prev
+      </button>
+      <span id="resumePageInfo" class="rv-page-info">—</span>
+      <button class="rv-nav-btn" id="resumeNext" onclick="resumeNextPage()" disabled>
+        Next
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
